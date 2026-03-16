@@ -1,11 +1,18 @@
 'use client';
 import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const { data: session } = useSession();
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleSignOut = async () => {
+    await signOut({ redirect: false });
+    router.push('/');
+    router.refresh();
+  };
 
   return (
     <nav className="navbar">
@@ -41,7 +48,7 @@ export default function Navbar() {
             )}
             <div className="nav-user">
               <span className="nav-user-name">{session.user?.name || session.user?.email}</span>
-              <button className="nav-btn" onClick={() => signOut({ callbackUrl: '/' })}>
+              <button className="nav-btn" onClick={handleSignOut}>
                 登出
               </button>
             </div>
