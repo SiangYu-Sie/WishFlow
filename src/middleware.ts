@@ -2,10 +2,12 @@ import { getToken } from 'next-auth/jwt';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+const SECRET = process.env.NEXTAUTH_SECRET || 'fallback_secret';
+
 export async function middleware(request: NextRequest) {
   const token = await getToken({
     req: request,
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: SECRET,
   });
 
   const { pathname } = request.nextUrl;
@@ -28,5 +30,13 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*', '/dashboard/:path*', '/wish/:path*'],
+  // 使用 regex 確保 /admin、/dashboard、/wish 本身及其子路徑都被攔截
+  matcher: [
+    '/admin',
+    '/admin/(.*)',
+    '/dashboard',
+    '/dashboard/(.*)',
+    '/wish',
+    '/wish/(.*)',
+  ],
 };
