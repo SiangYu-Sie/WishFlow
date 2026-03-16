@@ -395,3 +395,396 @@ input::placeholder, textarea::placeholder {
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-4 { margin-bottom: 1rem; }
 .mb-8 { margin-bottom: 2rem; }
+
+/* ================================================
+   首頁 Hero Section
+================================================ */
+.hero-section {
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 100px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  color: #c4b5fd;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2.5rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.hero-stat {
+  text-align: center;
+  padding: 0.5rem 2rem;
+  flex: 1;
+}
+
+.hero-stat strong {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.hero-stat span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--glass-border);
+  flex-shrink: 0;
+}
+
+/* ================================================
+   Features Section
+================================================ */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  letter-spacing: -1px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4), 0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1), rgba(217, 70, 239, 0.1));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* ================================================
+   Admin / Dashboard Stats Cards
+================================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* ================================================
+   Admin Wish/User Cards
+================================================ */
+.admin-wish-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.admin-wish-card:hover {
+  border-color: rgba(255,255,255,0.12);
+  background: rgba(25, 25, 25, 0.7);
+}
+
+.wish-content-box {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem;
+}
+
+/* ================================================
+   Filter Tabs
+================================================ */
+.filter-tab {
+  padding: 0.5rem 1.2rem;
+  border-radius: 100px;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-tab:hover {
+  border-color: rgba(255,255,255,0.2);
+  color: var(--text-primary);
+}
+
+.filter-tab.active {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: white;
+  font-weight: 600;
+}
+
+/* ================================================
+   Breadcrumb
+================================================ */
+.admin-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-breadcrumb a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.admin-breadcrumb a:hover {
+  color: var(--text-primary);
+}
+
+/* ================================================
+   User Avatar & Role Badges
+================================================ */
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.status-admin {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.status-user {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* ================================================
+   Small Action Buttons
+================================================ */
+.btn-success-small {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34d399;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-success-small:hover {
+  background: rgba(16, 185, 129, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-danger-small {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #f87171;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-danger-small:hover {
+  background: rgba(239, 68, 68, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-outline-small {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-small:hover {
+  border-color: rgba(255,255,255,0.2);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+/* ================================================
+   Navbar Extensions
+================================================ */
+.nav-active {
+  color: var(--text-primary) !important;
+}
+
+.nav-active::after {
+  width: 100% !important;
+}
+
+.nav-admin {
+  color: #c4b5fd !important;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-admin:hover {
+  color: #ddd6fe !important;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-user-name {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.nav-btn-cta {
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  padding: 0.5rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+}
+
+.nav-btn-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px var(--accent-glow);
+}
